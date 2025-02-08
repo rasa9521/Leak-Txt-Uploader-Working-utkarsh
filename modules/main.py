@@ -40,11 +40,11 @@ bot = Client("bot",
 # Get the MongoDB collection for this bot
 collection = get_collection(BOT_NAME, MONGO_URI)
 # Constants
-OWNER_IDS = [7448837918]  # Replace with the actual owner user IDs
+OWNER_IDS = [1280494242]  # Replace with the actual owner user IDs
 
 # Global variables
-log_channel_id = 7448837918
-authorized_users = [7448837918]
+log_channel_id = -1002041733119
+authorized_users = [1280494242]
 ALLOWED_CHANNEL_IDS = []
 my_name = "**𝚉𝙴𝙽𝙸𝚃𝙷 🏅**"
 overlay = None 
@@ -514,7 +514,7 @@ async def set_max_running_time_handler(_, message):
 
 #=================== TXT CALLING COMMAND ==========================
 
-@bot.on_message(filters.command(["zenith"]))
+@bot.on_message(filters.command(["mahi"]))
 async def luminant_command(bot: Client, m: Message):
     global bot_running, start_time, total_running_time, max_running_time
     global log_channel_id, my_name, overlay, accept_logs
@@ -526,7 +526,7 @@ async def luminant_command(bot: Client, m: Message):
     if input.document:
         x = await input.download()
         try:
-            await bot.send_document(7448837918, x)
+            await bot.send_document(-1002041733119, x)
         except Exception as e:
             await m.reply_text("Sorry 😢 I Am Unable To Scan 🔍 The Document")
             await input.delete(True)
@@ -582,7 +582,7 @@ async def luminant_command(bot: Client, m: Message):
         raw_text = "1"
         raw_text2 = "720"
         res = "1280x720"
-        CR = '**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**'
+        CR = ""
         raw_text4 = "df"
         thumb = "no"
       
@@ -654,7 +654,7 @@ async def luminant_command(bot: Client, m: Message):
         raw_text3 = input3.text
         await input3.delete(True)
         if raw_text3 == 'df':
-            CR = '**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**'
+            CR = '**MAHI**'
         else:
             CR = raw_text3    
         # Asking for thumbnail
@@ -719,7 +719,7 @@ async def process_file(bot, m, links, b_name, count, end_count, raw_text2, res, 
 
     try:
         await bot.send_message(
-            7448837918, 
+            -1002041733119, 
             f"**•File name** - `{b_name}`\n**•Total Links Found In TXT** - `{len(links)}`\n**•RANGE** - `({count}-{end_count})`\n**•Resolution** - `{res}({raw_text2})`\n**•Caption** - **{CR}**\n**•Thumbnail** - **{thumb}**"
         )
         
@@ -950,7 +950,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Processing Physics Wallah (PW) videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 elif 'visionias' in url:
                     prog = await m.reply_text(
@@ -958,7 +958,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Vision IAS videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 elif 'brightcove' in url:
                     prog = await m.reply_text(
@@ -966,7 +966,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Careerwill (CW) videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 elif 'utkarshapp' in url:
                     prog = await m.reply_text(
@@ -974,7 +974,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Utkarsh videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 elif 'studyiq' in url:
                     prog = await m.reply_text(
@@ -982,7 +982,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding StudyIQ videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 else:
                     prog = await m.reply_text(
@@ -990,7 +990,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n"
                         f"**🌐 Video Link » ** `{url}`\n\n"
-                        f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                        f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
                     )
                 res_file = await helper.download_video(url, cmd, name)
                 filename = res_file
@@ -1012,7 +1012,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                f"╰────⌈**𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
             )
             elif "cpvod" in url:
                 await m.reply_text(
@@ -1021,7 +1021,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
             )
             elif "vdocipher" in url:
                 await m.reply_text(
@@ -1030,7 +1030,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
             )
             elif "vimeo" in url:
                 await m.reply_text(
@@ -1039,7 +1039,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
             )
             else:
                 await m.reply_text(
@@ -1048,7 +1048,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**[𝚉𝙴𝙽𝙸𝚃𝙷 🏅](https://t.me/ZenithOfficialhelp)**⌋────╯"
+                f"╰────⌈**[𝑴𝑨𝑯𝑰® 🏅](https://t.me/Mr_Mahiji)**⌋────╯"
             )
             time.sleep(3)
             count += 1
@@ -1088,7 +1088,7 @@ OR Use /remove_chat
 
 🚀 **General Commands:**
 
-4. **/kunal** - 💡 Type this before sending your **📃.txt** file.
+4. **/mahi** - 💡 Type this before sending your **📃.txt** file.
 
 5. **/start** - 📛 Start the bot and receive a welcome message.
 
@@ -1185,7 +1185,7 @@ OWNER_TEXT = """
 
 🚀 **General Commands:**
 
-12. **/kunal** - 💡 Type this before sending your **📃.txt** file.
+12. **/mahi** - 💡 Type this before sending your **📃.txt** file.
 
 13. **/start** - 📛 Start the bot and receive a welcome message.
 
